@@ -12,7 +12,7 @@ const login = async (userdetails, FILE) => {
     const userFound = users.find((u) => u.email === userdetails.email);
 
     if (!userFound) {
-        return { message: "user not registered" };
+        return { message: "user cannot be found" };
     }
 
     if (userFound.password !== userdetails.password) {
